@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,48 @@ namespace PasswordManager
     {
         public MainWindow()
         {
-            InitializeComponent();
+
+
+        }
+        /*        void Execute(object parameter)
+                {
+                    var passwordBox = parameter as PasswordBox;
+                    var password = passwordBox.Password;
+                }*/
+
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            string loginField = logField.Text;
+            string passwordField = logField.Text;
+
+        }
+
+        private void ClearFieldButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            logField.Clear();
+            passField.Clear();
+        }
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CopyPassword_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(searchPassField.Password.ToString()); // searchPassField.Password.ToString() преобразование в string
+        }
+
+        private void SearchClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            searchLogField.Clear();
+            searchPassField.Clear();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
