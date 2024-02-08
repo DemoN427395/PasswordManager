@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace PasswordManager
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,12 +24,6 @@ namespace PasswordManager
 
 
         }
-        /*        void Execute(object parameter)
-                {
-                    var passwordBox = parameter as PasswordBox;
-                    var password = passwordBox.Password;
-                }*/
-
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -54,7 +45,7 @@ namespace PasswordManager
 
         private void CopyPassword_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(searchPassField.Password.ToString()); // searchPassField.Password.ToString() преобразование в string
+            Clipboard.SetText(searchPassField.Password.ToString());
         }
 
         private void SearchClearButton_Click(object sender, RoutedEventArgs e)
